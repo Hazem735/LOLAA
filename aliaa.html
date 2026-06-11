@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>علياء حبيبتي 💗</title>
+  <meta name="description" content="موقع كيوت مخصوص لعلياء حبيبتي - أسئلة ممتعة ورسائل حب">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💗</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --pink-100: #fff0f5;
+      --pink-200: #ffd6e7;
+      --pink-300: #ffb3d0;
+      --pink-400: #ff80b0;
+      --pink-500: #ff4d8d;
+      --pink-600: #e6337a;
+      --lavender-100: #f3e8ff;
+      --lavender-200: #e0c8ff;
+      --lavender-300: #c9a0ff;
+      --mint-100: #e8fff5;
+      --mint-200: #b8f0d8;
+      --peach-100: #fff5eb;
+      --peach-200: #ffe0c0;
+      --gold: #ffd700;
+      --text-dark: #4a3347;
+      --text-light: #7a6078;
+      --text-muted: #a08da0;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-shadow: 0 20px 60px rgba(255, 77, 141, 0.12), 0 8px 24px rgba(180, 100, 220, 0.08);
+      --btn-shadow: 0 6px 20px rgba(255, 77, 141, 0.25);
+      --font-ar: 'Tajawal', sans-serif;
+      --font-en: 'Fredoka', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-ar);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      background: linear-gradient(135deg, #fff0f5 0%, #f3e8ff 30%, #e8fff5 60%, #fff5eb 100%);
+      padding: 20px 10px;
+    }
+
+    @media (max-width: 360px) {
+      .card { padding: 20px 15px !important; }
+      .screen-title { font-size: 20px !important; }
+    }
+
+    /* === Animated Background Gradient === */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 179, 208, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(201, 160, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(184, 240, 216, 0.2) 0%, transparent 50%);
+      animation: bgShift 12s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes bgShift {
+      0% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.1) rotate(2deg); }
+      100% { transform: scale(1) rotate(-2deg); }
+    }
+
+    /* === Floating Particles === */
+    .particles-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      bottom: -60px;
+      animation: particleFloat linear infinite;
+      opacity: 0;
+      will-change: transform;
+    }
+
+    @keyframes particleFloat {
+      0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+      8% { opacity: 0.7; }
+      85% { opacity: 0.7; }
+      100% { transform: translateY(-110vh) rotate(360deg) scale(1.1); opacity: 0; }
+    }
+
+    /* === Sparkle Effect === */
+    .sparkle-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: sparkleAnim 2s ease-in-out infinite;
+      box-shadow: 0 0 6px var(--gold), 0 0 12px rgba(255, 215, 0, 0.5);
+    }
+
+    @keyframes sparkleAnim {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+
+    /* === Main App Container === */
+    .app-wrapper {
+      width: 100%;
+      max-width: 480px;
+      padding: 20px 10px;
+      z-index: 10;
+      position: relative;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(255, 255, 255, 0.7);
+      border-radius: 32px;
+      box-shadow: var(--card-shadow);
+      padding: 40px 28px;
+      text-align: center;
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      overflow: hidden;
+    }
+
+    /* Decorative top border glow */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--pink-400), var(--lavender-300), var(--mint-200), transparent);
+      border-radius: 0 0 50% 50%;
+    }
+
+    /* Corner decorations */
+    .card::after {
+      content: '✿';
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 20px;
+      opacity: 0.3;
+      animation: spinFlower 8s linear infinite;
+    }
+
+    @keyframes spinFlower {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* === Screen System === */
+    .screen {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .screen.active {
+      display: flex;
+      animation: screenIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes screenIn {
+      from { opacity: 0; transform: translateY(30px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .screen.fade-out {
+      animation: screenOut 0.3s ease-in forwards;
+    }
+
+    @keyframes screenOut {
+      to { opacity: 0; transform: translateY(-20px) scale(0.98); }
+    }
+
+    /* === Image Wrapper === */
+    .img-wrap {
+      width: 170px;
+      height: 170px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(255, 77, 141, 0.15), 0 0 0 4px rgba(255, 255, 255, 0.8), 0 0 0 8px rgba(255, 179, 208, 0.3);
+      background: #fff;
+      animation: imgFloat 4s ease-in-out infinite alternate;
+      position: relative;
+    }
+
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes imgFloat {
+      0% { transform: translateY(0) rotate(-2deg); }
+      100% { transform: translateY(-10px) rotate(2deg); }
+    }
+
+    /* === Typography === */
+    .screen-emoji {
+      font-size: 52px;
+      margin-bottom: 10px;
+      animation: emojiPulse 2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+
+    @keyframes emojiPulse {
+      0% { transform: scale(1) rotate(-5deg); }
+      100% { transform: scale(1.12) rotate(5deg); }
+    }
+
+    .screen-title {
+      font-family: var(--font-ar);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .screen-title span {
+      background: linear-gradient(135deg, var(--pink-500), var(--lavender-300));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .screen-sub {
+      font-size: 16px;
+      color: var(--text-light);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* === Buttons === */
+    .btn {
+      font-family: var(--font-ar);
+      font-size: 17px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 60%);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--pink-500), var(--pink-600));
+      color: #fff;
+      box-shadow: var(--btn-shadow);
+      min-width: 130px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(255, 77, 141, 0.35);
+    }
+
+    .btn-primary:active {
+      transform: translateY(-1px) scale(0.98);
+    }
+
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--lavender-100), var(--pink-100));
+      color: var(--text-light);
+      border: 2px solid var(--pink-200);
+      min-width: 130px;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, var(--lavender-200), var(--pink-200));
+      transform: translateY(-2px);
+    }
+
+    .btn-no {
+      transition: left 0.15s cubic-bezier(0.25, 1, 0.5, 1), top 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+      z-index: 10;
+    }
+
+    .btn-no.escape {
+      position: absolute;
+      z-index: 999;
+    }
+
+    .btn-full {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+    }
+
+    .btn-full.disabled {
+      background: linear-gradient(135deg, #e8dde8, #ddd0dd);
+      color: var(--text-muted);
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .btn-full.disabled:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #20ba5a);
+      color: #fff;
+      width: 100%;
+      font-size: 18px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      width: 100%;
+      margin-top: 16px;
+      position: relative;
+      min-height: 60px;
+      align-items: center;
+    }
+
+    /* === Forms === */
+    .form-area {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .form-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    .text-input, input[type="date"], input[type="time"] {
+      width: 100%;
+      font-family: var(--font-ar);
+      font-size: 15px;
+      padding: 14px 18px;
+      border-radius: 16px;
+      border: 2px solid var(--pink-200);
+      background: #fff;
+      outline: none;
+      transition: all 0.3s ease;
+      color: var(--text-dark);
+      min-height: 50px;
+    }
+
+    .text-input:focus, input[type="date"]:focus, input[type="time"]:focus {
+      border-color: var(--pink-400);
+      box-shadow: 0 0 0 4px rgba(255, 77, 141, 0.1), 0 4px 12px rgba(255, 77, 141, 0.08);
+    }
+
+    .text-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    /* === Selection Grid === */
+    .selection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      margin: 16px 0;
+    }
+
+    .grid-card {
+      background: #fff;
+      border: 2.5px solid transparent;
+      border-radius: 20px;
+      padding: 14px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      gap: 4px;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(255, 77, 141, 0.1);
+      border-color: var(--pink-200);
+    }
+
+    .grid-card.selected {
+      background: linear-gradient(135deg, var(--pink-100), var(--lavender-100));
+      border-color: var(--pink-400);
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 77, 141, 0.15);
+    }
+
+    .grid-emoji {
+      font-size: 30px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .grid-card.selected .grid-emoji {
+      transform: scale(1.2) rotate(8deg);
+      animation: selectedBounce 0.5s ease;
+    }
+
+    @keyframes selectedBounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.35) rotate(12deg); }
+      100% { transform: scale(1.2) rotate(8deg); }
+    }
+
+    .grid-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* === Vibe Cards (2-column) === */
+    .vibe-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      margin: 16px 0;
+    }
+
+    .vibe-card {
+      background: #fff;
+      border: 2.5px solid transparent;
+      border-radius: 20px;
+      padding: 18px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      gap: 6px;
+    }
+
+    .vibe-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(180, 100, 220, 0.12);
+      border-color: var(--lavender-200);
+    }
+
+    .vibe-card.selected {
+      background: linear-gradient(135deg, var(--lavender-100), var(--mint-100));
+      border-color: var(--lavender-300);
+      transform: scale(1.04);
+      box-shadow: 0 8px 25px rgba(180, 100, 220, 0.18);
+    }
+
+    .vibe-emoji {
+      font-size: 36px;
+      transition: transform 0.3s ease;
+    }
+
+    .vibe-card.selected .vibe-emoji {
+      animation: selectedBounce 0.5s ease;
+    }
+
+    .vibe-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* === Hearts Beat === */
+    .hearts-row {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .beat-heart {
+      font-size: 30px;
+      display: inline-block;
+      animation: heartBeat 1s infinite;
+      filter: drop-shadow(0 2px 4px rgba(255, 77, 141, 0.3));
+    }
+
+    .beat-heart:nth-child(2) { animation-delay: 0.1s; }
+    .beat-heart:nth-child(3) { animation-delay: 0.2s; }
+    .beat-heart:nth-child(4) { animation-delay: 0.3s; }
+    .beat-heart:nth-child(5) { animation-delay: 0.4s; }
+
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.3); }
+      50% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+
+    /* === Love Letter Text === */
+    .letter-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-light);
+      font-style: italic;
+      margin: 12px 0 20px;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--pink-100), var(--lavender-100));
+      border-radius: 16px;
+      border-right: 3px solid var(--pink-400);
+      text-align: right;
+    }
+
+    /* === Progress Indicator === */
+    .progress-bar {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .progress-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pink-200);
+      transition: all 0.4s ease;
+    }
+
+    .progress-dot.active {
+      background: var(--pink-500);
+      width: 24px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(255, 77, 141, 0.4);
+    }
+
+    .progress-dot.done {
+      background: var(--pink-400);
+    }
+
+    /* === Confetti Canvas === */
+    #confetti-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* === Rating Hearts === */
+    .rating-hearts {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin: 16px 0;
+      direction: ltr;
+    }
+
+    .rate-heart {
+      font-size: 36px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      filter: grayscale(1) opacity(0.4);
+    }
+
+    .rate-heart:hover,
+    .rate-heart.active {
+      filter: grayscale(0) opacity(1);
+      transform: scale(1.2);
+    }
+
+    .rate-heart.active {
+      animation: rateHeartPop 0.3s ease;
+    }
+
+    @keyframes rateHeartPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.4); }
+      100% { transform: scale(1.2); }
+    }
+
+    /* === Responsive === */
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px 18px;
+        min-height: 460px;
+        border-radius: 28px;
+      }
+      .screen-title { font-size: 22px; }
+      .selection-grid { gap: 8px; }
+      .grid-card { padding: 10px 6px; }
+      .grid-emoji { font-size: 26px; }
+      .grid-label { font-size: 11px; }
+      .img-wrap { width: 130px; height: 130px; }
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 24px 12px;
+        min-height: 420px;
+        border-radius: 24px;
+      }
+      .screen-title { font-size: 19px; }
+      .screen-sub { font-size: 14px; margin-bottom: 12px; }
+      .selection-grid { gap: 6px; }
+      .grid-card { padding: 8px 4px; }
+      .grid-emoji { font-size: 22px; }
+      .grid-label { font-size: 10px; }
+      .vibe-grid { gap: 8px; }
+      .vibe-card { padding: 12px 8px; }
+      .vibe-emoji { font-size: 28px; }
+      .vibe-label { font-size: 11px; }
+      .btn { font-size: 15px; padding: 12px 24px; }
+      .btn-group { gap: 10px; }
+      .img-wrap { width: 110px; height: 110px; margin-bottom: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particles -->
+  <div class="particles-container" id="particles"></div>
+  
+  <!-- Sparkles -->
+  <div class="sparkle-container" id="sparkles"></div>
+
+  <!-- Confetti -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Main App -->
+  <main class="app-wrapper">
+    <div class="card" id="card">
+
+      <!-- Progress Bar -->
+      <div class="progress-bar" id="progress-bar">
+        <div class="progress-dot active" data-step="0"></div>
+        <div class="progress-dot" data-step="1"></div>
+        <div class="progress-dot" data-step="2"></div>
+        <div class="progress-dot" data-step="3"></div>
+        <div class="progress-dot" data-step="4"></div>
+        <div class="progress-dot" data-step="5"></div>
+        <div class="progress-dot" data-step="6"></div>
+        <div class="progress-dot" data-step="7"></div>
+      </div>
+
+      <!-- SCREEN 0: Welcome -->
+      <section class="screen active" id="screen-welcome">
+        <div class="screen-emoji">💌🌸</div>
+        <h1 class="screen-title">أهلاً يا <span>علياء</span> 💗</h1>
+        <p class="screen-sub">عندي شوية أسئلة كيوت ليكي... جاهزة؟ 🦋</p>
+        <form class="form-area" id="welcome-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="input-name" class="form-label">اسمك الحلو 🌷</label>
+            <input type="text" id="input-name" class="text-input" placeholder="يا أحلى اسم في الدنيا..." required>
+          </div>
+          <div class="form-group">
+            <label for="input-phone" class="form-label">رقم الواتساب 📱</label>
+            <input type="tel" id="input-phone" class="text-input" placeholder="مثلاً: 01012345678+" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="btn-start">يلا نبدأ! 🚀✨</button>
+        </form>
+      </section>
+
+      <!-- SCREEN 1: Main Question -->
+      <section class="screen" id="screen-question">
+        <div class="img-wrap">
+          <img src="assets/images/cute_bears.png" alt="cute bears hugging" id="question-img">
+        </div>
+        <h1 class="screen-title" id="question-title">هتقبلي تطلعي معايا يا <span>علياء</span>؟ 🌹</h1>
+        <p class="screen-sub">بليييز قولي أيوه! 🥺💕</p>
+        <div class="btn-group" id="question-buttons">
+          <button class="btn btn-primary" id="btn-yes">أيوه! 💗</button>
+          <button class="btn btn-secondary btn-no" id="btn-no">لأ 😅</button>
+        </div>
+      </section>
+
+      <!-- SCREEN 2: Yay! -->
+      <section class="screen" id="screen-yay">
+        <div class="img-wrap">
+          <img src="assets/images/cute_bunny.png" alt="cute bunny celebration">
+        </div>
+        <div class="screen-emoji">🎉🥳</div>
+        <h1 class="screen-title">يااااي! <span>عرفت إنك هتقولي أيوه!</span> 💃</h1>
+        <p class="screen-sub">أنا فرحان أوووي! 🦋✨ يلا نكمل</p>
+        <button class="btn btn-primary btn-full" id="btn-yay-next">يلا نكمل! 🎀</button>
+      </section>
+
+      <!-- SCREEN 3: Rate Love -->
+      <section class="screen" id="screen-rate">
+        <div class="screen-emoji">💘</div>
+        <h1 class="screen-title">بتحبيني قد إيه يا <span>علياء</span>؟ 🥺</h1>
+        <p class="screen-sub">اختاري عدد القلوب 💗</p>
+        <div class="rating-hearts" id="rating-hearts">
+          <span class="rate-heart" data-value="1">💖</span>
+          <span class="rate-heart" data-value="2">💖</span>
+          <span class="rate-heart" data-value="3">💖</span>
+          <span class="rate-heart" data-value="4">💖</span>
+          <span class="rate-heart" data-value="5">💖</span>
+        </div>
+        <p class="screen-sub" id="rate-label" style="font-weight:700; color: var(--pink-500); min-height: 24px;"></p>
+        <button class="btn btn-primary btn-full disabled" id="btn-rate-next" disabled>كملي! 💕</button>
+      </section>
+
+      <!-- SCREEN 4: Date Picker -->
+      <section class="screen" id="screen-date">
+        <div class="screen-emoji">📅💫</div>
+        <h1 class="screen-title">إمتى نطلع يا <span>قمر</span>؟ 🌙</h1>
+        <p class="screen-sub">اختاري اليوم والوقت اللي يناسبك ✨</p>
+        <form class="form-area" id="date-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="input-date" class="form-label">اليوم 📆</label>
+            <input type="date" id="input-date" required>
+          </div>
+          <div class="form-group">
+            <label for="input-time" class="form-label">الساعة ⏰</label>
+            <input type="time" id="input-time" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="btn-date-next">تمام! 🎯</button>
+        </form>
+      </section>
+
+      <!-- SCREEN 5: Food Selection -->
+      <section class="screen" id="screen-food">
+        <div class="screen-emoji">🍽️</div>
+        <h1 class="screen-title">عايزة تاكلي إيه يا <span>حبيبتي</span>؟ 😋</h1>
+        <p class="screen-sub">اختاري اللي يعجبك (ممكن أكتر من واحد) 🤤</p>
+        <div class="selection-grid" id="food-grid">
+          <div class="grid-card" data-food="بيتزا"><span class="grid-emoji">🍕</span><span class="grid-label">بيتزا</span></div>
+          <div class="grid-card" data-food="برجر"><span class="grid-emoji">🍔</span><span class="grid-label">برجر</span></div>
+          <div class="grid-card" data-food="سوشي"><span class="grid-emoji">🍣</span><span class="grid-label">سوشي</span></div>
+          <div class="grid-card" data-food="باستا"><span class="grid-emoji">🍝</span><span class="grid-label">باستا</span></div>
+          <div class="grid-card" data-food="آيس كريم"><span class="grid-emoji">🍦</span><span class="grid-label">آيس كريم</span></div>
+          <div class="grid-card" data-food="شوكولاتة"><span class="grid-emoji">🍫</span><span class="grid-label">شوكولاتة</span></div>
+          <div class="grid-card" data-food="كريب"><span class="grid-emoji">🥞</span><span class="grid-label">كريب</span></div>
+          <div class="grid-card" data-food="ستيك"><span class="grid-emoji">🥩</span><span class="grid-label">ستيك</span></div>
+          <div class="grid-card" data-food="مشروبات"><span class="grid-emoji">🧃</span><span class="grid-label">مشروبات</span></div>
+        </div>
+        <button class="btn btn-primary btn-full disabled" id="btn-food-next" disabled>اختياراتك حلوة! 🎀</button>
+      </section>
+
+      <!-- SCREEN 6: Vibe Selection -->
+      <section class="screen" id="screen-vibe">
+        <div class="screen-emoji">🎭</div>
+        <h1 class="screen-title">عايزة <span>الجو</span> يكون إيه؟ 🌈</h1>
+        <p class="screen-sub">اختاري الفايب بتاعتك ✨</p>
+        <div class="vibe-grid" id="vibe-grid">
+          <div class="vibe-card" data-vibe="رومانسي"><span class="vibe-emoji">🕯️</span><span class="vibe-label">رومانسي</span></div>
+          <div class="vibe-card" data-vibe="مغامرة"><span class="vibe-emoji">🎢</span><span class="vibe-label">مغامرة</span></div>
+          <div class="vibe-card" data-vibe="هادي"><span class="vibe-emoji">🌅</span><span class="vibe-label">هادي وريلاكس</span></div>
+          <div class="vibe-card" data-vibe="فانيّ"><span class="vibe-emoji">😂</span><span class="vibe-label">ضحك وهزار</span></div>
+          <div class="vibe-card" data-vibe="فاخر"><span class="vibe-emoji">👑</span><span class="vibe-label">فاخر ومميز</span></div>
+          <div class="vibe-card" data-vibe="عفوي"><span class="vibe-emoji">🌻</span><span class="vibe-label">عفوي وبسيط</span></div>
+        </div>
+        <button class="btn btn-primary btn-full disabled" id="btn-vibe-next" disabled>تمام كده! 🎉</button>
+      </section>
+
+      <!-- SCREEN 7: Final Love Letter -->
+      <section class="screen" id="screen-final">
+        <div class="img-wrap">
+          <img src="assets/images/cute_kittens.png" alt="cute kittens date">
+        </div>
+        <h1 class="screen-title" id="final-title">كنت عارف إنك مش هتقولي <span>لأ</span> يا <span id="final-name">علياء</span> 💗</h1>
+        <div class="letter-text" id="final-letter">
+          أنا بحبك أوووي يا علياء... إنتي أحلى حاجة حصلتلي في حياتي 🌹
+          <br>مستني اليوم ده بفارغ الصبر! جهزي نفسك، أنا جاي أخدك 🚗💨
+        </div>
+        <div class="hearts-row">
+          <span class="beat-heart">💗</span>
+          <span class="beat-heart">💕</span>
+          <span class="beat-heart">💖</span>
+          <span class="beat-heart">💗</span>
+          <span class="beat-heart">💕</span>
+        </div>
+        <a class="btn btn-whatsapp" id="btn-whatsapp" href="#" target="_blank">
+          ابعت على واتساب 📲💚
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* ===== Config ===== */
+      const HOST_WHATSAPP = "201062708957"; // Change to your number
+
+      /* ===== State ===== */
+      const userData = {
+        name: '',
+        phone: '',
+        loveRating: 0,
+        date: '',
+        time: '',
+        foods: [],
+        vibe: ''
+      };
+
+      let currentStep = 0;
+      const screens = [
+        'screen-welcome',
+        'screen-question',
+        'screen-yay',
+        'screen-rate',
+        'screen-date',
+        'screen-food',
+        'screen-vibe',
+        'screen-final'
+      ];
+
+      /* ===== DOM Refs ===== */
+      const card = document.getElementById('card');
+      const btnYes = document.getElementById('btn-yes');
+      const btnNo = document.getElementById('btn-no');
+      const progressDots = document.querySelectorAll('.progress-dot');
+
+      /* ===== Navigation ===== */
+      function goToScreen(step) {
+        const currentScreen = document.querySelector('.screen.active');
+        if (currentScreen) {
+          currentScreen.classList.add('fade-out');
+          setTimeout(() => {
+            currentScreen.classList.remove('active', 'fade-out');
+            showScreen(step);
+          }, 280);
+        } else {
+          showScreen(step);
+        }
+      }
+
+      function showScreen(step) {
+        currentStep = step;
+        const screen = document.getElementById(screens[step]);
+        if (screen) {
+          screen.classList.add('active');
+          updateProgress(step);
+
+          // Trigger confetti on yay and final screens
+          if (step === 2 || step === 7) {
+            launchConfetti();
+          }
+        }
+      }
+
+      function updateProgress(step) {
+        progressDots.forEach((dot, i) => {
+          dot.classList.remove('active', 'done');
+          if (i < step) dot.classList.add('done');
+          if (i === step) dot.classList.add('active');
+        });
+      }
+
+      /* ===== Screen 0: Welcome Form ===== */
+      document.getElementById('welcome-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('input-name').value.trim();
+        const phone = document.getElementById('input-phone').value.trim();
+        if (!name || !phone) return;
+
+        userData.name = name;
+        userData.phone = phone;
+
+        // Personalize screens
+        document.getElementById('question-title').innerHTML = 
+          `هتقبلي تطلعي معايا يا <span>${name}</span>؟ 🌹`;
+        document.getElementById('final-name').textContent = name;
+
+        goToScreen(1);
+      });
+
+      /* ===== Screen 1: Question - No Button Escape ===== */
+      function escapeNoBtn() {
+        if (!btnNo.classList.contains('escape')) {
+          btnNo.classList.add('escape');
+        }
+
+        const cardRect = card.getBoundingClientRect();
+        const btnRect = btnNo.getBoundingClientRect();
+        const pad = 20;
+
+        const minX = pad;
+        const maxX = cardRect.width - btnRect.width - pad;
+        const minY = cardRect.height * 0.45;
+        const maxY = cardRect.height - btnRect.height - pad;
+
+        let rx = Math.random() * (maxX - minX) + minX;
+        let ry = Math.random() * (maxY - minY) + minY;
+
+        // Avoid overlap with Yes button
+        const yesRect = btnYes.getBoundingClientRect();
+        const yCX = yesRect.left - cardRect.left + yesRect.width / 2;
+        const yCY = yesRect.top - cardRect.top + yesRect.height / 2;
+        if (Math.hypot(rx - yCX, ry - yCY) < 100) {
+          rx = (rx + 140) % (maxX - minX) + minX;
+          ry = (ry + 140) % (maxY - minY) + minY;
+        }
+
+        btnNo.style.left = `${rx}px`;
+        btnNo.style.top = `${ry}px`;
+      }
+
+      document.addEventListener('mousemove', (e) => {
+        const active = document.querySelector('.screen.active');
+        if (!active || active.id !== 'screen-question') return;
+
+        const r = btnNo.getBoundingClientRect();
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        if (Math.hypot(e.clientX - cx, e.clientY - cy) < 90) {
+          escapeNoBtn();
+        }
+      });
+
+      btnNo.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        escapeNoBtn();
+      });
+
+      btnYes.addEventListener('click', () => {
+        btnNo.classList.remove('escape');
+        btnNo.style.left = '';
+        btnNo.style.top = '';
+        goToScreen(2);
+      });
+
+      /* ===== Screen 2: Yay ===== */
+      document.getElementById('btn-yay-next').addEventListener('click', () => {
+        goToScreen(3);
+      });
+
+      /* ===== Screen 3: Love Rating ===== */
+      const rateHearts = document.querySelectorAll('.rate-heart');
+      const rateLabels = ['شوية 🥲', 'كتير 😊', 'كتير أوي! 🥰', 'مووووت! 😍', 'حب عمري كلها! 💗🔥'];
+
+      rateHearts.forEach((heart) => {
+        heart.addEventListener('click', () => {
+          const val = parseInt(heart.dataset.value);
+          userData.loveRating = val;
+
+          rateHearts.forEach((h, i) => {
+            if (i < val) h.classList.add('active');
+            else h.classList.remove('active');
+          });
+
+          document.getElementById('rate-label').textContent = rateLabels[val - 1];
+          const btn = document.getElementById('btn-rate-next');
+          btn.classList.remove('disabled');
+          btn.removeAttribute('disabled');
+        });
+      });
+
+      document.getElementById('btn-rate-next').addEventListener('click', () => {
+        if (userData.loveRating > 0) goToScreen(4);
+      });
+
+      /* ===== Screen 4: Date/Time ===== */
+      document.getElementById('date-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const d = document.getElementById('input-date').value;
+        const t = document.getElementById('input-time').value;
+        if (d && t) {
+          userData.date = d;
+          userData.time = t;
+          goToScreen(5);
+        }
+      });
+
+      /* ===== Screen 5: Food ===== */
+      const foodCards = document.querySelectorAll('#food-grid .grid-card');
+      const btnFoodNext = document.getElementById('btn-food-next');
+
+      foodCards.forEach((fc) => {
+        fc.addEventListener('click', () => {
+          const food = fc.dataset.food;
+          fc.classList.toggle('selected');
+
+          if (fc.classList.contains('selected')) {
+            userData.foods.push(food);
+          } else {
+            userData.foods = userData.foods.filter(f => f !== food);
+          }
+
+          if (userData.foods.length > 0) {
+            btnFoodNext.classList.remove('disabled');
+            btnFoodNext.removeAttribute('disabled');
+          } else {
+            btnFoodNext.classList.add('disabled');
+            btnFoodNext.setAttribute('disabled', 'true');
+          }
+        });
+      });
+
+      btnFoodNext.addEventListener('click', () => {
+        if (userData.foods.length > 0) goToScreen(6);
+      });
+
+      /* ===== Screen 6: Vibe ===== */
+      const vibeCards = document.querySelectorAll('#vibe-grid .vibe-card');
+      const btnVibeNext = document.getElementById('btn-vibe-next');
+
+      vibeCards.forEach((vc) => {
+        vc.addEventListener('click', () => {
+          vibeCards.forEach(v => v.classList.remove('selected'));
+          vc.classList.add('selected');
+          userData.vibe = vc.dataset.vibe;
+
+          btnVibeNext.classList.remove('disabled');
+          btnVibeNext.removeAttribute('disabled');
+        });
+      });
+
+      btnVibeNext.addEventListener('click', () => {
+        if (userData.vibe) {
+          // Personalize final screen
+          const loveWords = ['❤️', '❤️❤️', '❤️❤️❤️', '❤️❤️❤️❤️', '❤️❤️❤️❤️❤️'];
+          document.getElementById('final-letter').innerHTML = 
+            `أنا بحبك أوووي يا ${userData.name}... إنتي أحلى حاجة حصلتلي في حياتي 🌹` +
+            `<br>حبك عندي: ${loveWords[userData.loveRating - 1]}` +
+            `<br>مستنيكي يوم الموعد بفارغ الصبر! 💫` +
+            `<br>جهزي نفسك، أنا جاي أخدك 🚗💨`;
+
+          goToScreen(7);
+        }
+      });
+
+      /* ===== Screen 7: WhatsApp ===== */
+      document.getElementById('btn-whatsapp').addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const dateFormatted = new Date(userData.date).toLocaleDateString('ar-EG', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        const msg = `أهلاً! 💗 أنا قبلت الدعوة! 🌹\n\n` +
+          `التفاصيل:\n` +
+          `👤 *الاسم:* ${userData.name}\n` +
+          `📱 *الرقم:* ${userData.phone}\n` +
+          `💖 *مقدار الحب:* ${'❤️'.repeat(userData.loveRating)} (${userData.loveRating}/5)\n` +
+          `📅 *التاريخ:* ${dateFormatted}\n` +
+          `⏰ *الوقت:* ${userData.time}\n` +
+          `🍽️ *الأكل:* ${userData.foods.join('، ')}\n` +
+          `🎭 *الفايب:* ${userData.vibe}\n\n` +
+          `مستنية بفارغ الصبر! 🥰✨`;
+
+        const encoded = encodeURIComponent(msg);
+        window.open(`https://wa.me/${HOST_WHATSAPP}?text=${encoded}`, '_blank');
+      });
+
+      /* ===== Particles System ===== */
+      const particlesEl = document.getElementById('particles');
+      const emojis = ['💗', '💕', '🌸', '✨', '💖', '🌟', '🦋', '🌷', '💝', '⭐', '🎀'];
+
+      function spawnParticle() {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.fontSize = `${Math.random() * 14 + 12}px`;
+        const dur = Math.random() * 6 + 7;
+        p.style.animationDuration = `${dur}s`;
+        p.style.animationDelay = `${Math.random() * 2}s`;
+        particlesEl.appendChild(p);
+        setTimeout(() => p.remove(), (dur + 3) * 1000);
+      }
+
+      setInterval(spawnParticle, 500);
+
+      // Initial burst
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          p.style.left = `${Math.random() * 100}%`;
+          p.style.fontSize = `${Math.random() * 14 + 12}px`;
+          const dur = Math.random() * 6 + 7;
+          p.style.animationDuration = `${dur}s`;
+          p.style.animationDelay = `-${Math.random() * dur}s`;
+          particlesEl.appendChild(p);
+        }, i * 80);
+      }
+
+      /* ===== Sparkle System ===== */
+      const sparklesEl = document.getElementById('sparkles');
+
+      function spawnSparkle() {
+        const s = document.createElement('div');
+        s.className = 'sparkle';
+        s.style.left = `${Math.random() * 100}%`;
+        s.style.top = `${Math.random() * 100}%`;
+        const dur = Math.random() * 2 + 1.5;
+        s.style.animationDuration = `${dur}s`;
+        s.style.animationDelay = `${Math.random() * 2}s`;
+        s.style.width = `${Math.random() * 4 + 2}px`;
+        s.style.height = s.style.width;
+        sparklesEl.appendChild(s);
+        setTimeout(() => s.remove(), (dur + 3) * 1000);
+      }
+
+      setInterval(spawnSparkle, 300);
+
+      /* ===== Confetti ===== */
+      const confettiCanvas = document.getElementById('confetti-canvas');
+      const ctx = confettiCanvas.getContext('2d');
+      let confettiPieces = [];
+      let confettiAnimating = false;
+
+      function resizeCanvas() {
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      function launchConfetti() {
+        confettiPieces = [];
+        const colors = ['#ff4d8d', '#c9a0ff', '#ffd700', '#ff80b0', '#b8f0d8', '#ffe0c0', '#ff6b9d', '#a78bfa'];
+
+        for (let i = 0; i < 120; i++) {
+          confettiPieces.push({
+            x: Math.random() * confettiCanvas.width,
+            y: Math.random() * confettiCanvas.height - confettiCanvas.height,
+            w: Math.random() * 10 + 5,
+            h: Math.random() * 6 + 3,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speed: Math.random() * 4 + 2,
+            angle: Math.random() * Math.PI * 2,
+            spin: (Math.random() - 0.5) * 0.2,
+            drift: (Math.random() - 0.5) * 2,
+            opacity: 1
+          });
+        }
+
+        if (!confettiAnimating) {
+          confettiAnimating = true;
+          animateConfetti();
+        }
+      }
+
+      function animateConfetti() {
+        ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        let alive = false;
+
+        confettiPieces.forEach(p => {
+          if (p.opacity <= 0) return;
+          alive = true;
+
+          p.y += p.speed;
+          p.x += p.drift;
+          p.angle += p.spin;
+
+          if (p.y > confettiCanvas.height + 20) {
+            p.opacity -= 0.05;
+          }
+
+          ctx.save();
+          ctx.globalAlpha = p.opacity;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.angle);
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.roundRect(-p.w / 2, -p.h / 2, p.w, p.h, 2);
+          ctx.fill();
+          ctx.restore();
+        });
+
+        if (alive) {
+          requestAnimationFrame(animateConfetti);
+        } else {
+          confettiAnimating = false;
+          ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+        }
+      }
+
+    });
+  </script>
+</body>
+</html>
